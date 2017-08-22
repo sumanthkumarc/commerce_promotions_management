@@ -82,8 +82,8 @@ class UnusedCouponsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    //$config = $this->config('commerce_promotions_management.unused_coupons');
-    //$values = $form_state->getValues();
+    $config = $this->config('commerce_promotions_management.unused_coupons');
+    $values = $form_state->getValues();
     $trig_el = $form_state->getTriggeringElement();
 
     $discount_percentage = (string) $values['coupon_discount_percent'];
