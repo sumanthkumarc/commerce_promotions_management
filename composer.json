@@ -1,0 +1,14 @@
+{
+  "name": "drupal/commerce_promotions_management",
+  "type": "drupal-module",
+  "description": "Manage general commerce promotions.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/commerce_promotions_management",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/commerce_promotions_management",
+    "source": "http://cgit.drupalcode.org/commerce_promotions_management"
+  },
+  "require": { }
+}

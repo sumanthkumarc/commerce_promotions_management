@@ -1,0 +1,7 @@
+name: commerce promotions management
+type: module
+description: Manage general commerce promotions.
+core: 8.x
+package: Custom
+dependencies:
+  - commerce

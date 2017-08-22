@@ -1,0 +1,17 @@
+commerce_promotions_management.site_wide_promotions:
+  title: Commerce Site Wide Promotions
+  route_name: commerce_promotions_management.unused
+  parent: commerce.admin_commerce
+  description: 'Site Wide Discount settings.'
+
+commerce_promotions_management.site_wide_promotions_unused:
+  title: Unused Coupons
+  route_name: commerce_promotions_management.unused
+  parent: commerce_promotions_management.site_wide_promotions
+  description: 'Unused coupon settings.'
+
+commerce_promotions_management.site_wide_promotions_applied:
+  title: Applied Coupons
+  route_name: commerce_promotions_management.applied
+  parent: commerce_promotions_management.site_wide_promotions
+  description: 'Applied coupon settings.'

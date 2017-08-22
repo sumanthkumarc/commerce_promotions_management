@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Contains commerce_promotions_management.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function commerce_promotions_management_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the commerce_promotions_management module.
+    case 'help.page.commerce_promotions_management':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Manage general commerce promotions.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_promotions_management_theme() {
+  return [
+    'commerce_promotions_management' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+function commerce_promotions_management_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if ($entity_type->id() == 'commerce_promotion') {
+    $fields['custom_promotion_type'] = \Drupal\Core\Field\BaseFieldDefinition::create('string')
+      ->setLabel(t('Promotion type'))
+      ->setDescription(t('The promotion type.'))
+      ->setDisplayOptions('form', [
+        'type' => 'hidden',
+        'weight' => 0,
+      ])
+      ->setDisplayConfigurable('view', FALSE)
+      ->setDisplayConfigurable('form', FALSE);
+  }
+
+  return $fields;
+}

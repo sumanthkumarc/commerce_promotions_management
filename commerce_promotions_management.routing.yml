@@ -1,0 +1,20 @@
+
+commerce_promotions_management.unused:
+  path: '/admin/commerce/site-wide-discounts-unused'
+  defaults:
+    _controller: '\Drupal\commerce_promotions_management\Controller\UnusedCouponsController::build'
+    _title: 'Unused Coupons'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+      _admin_route: TRUE
+
+commerce_promotions_management.applied:
+  path: '/admin/commerce/site-wide-discounts-applied'
+  defaults:
+    _controller: '\Drupal\commerce_promotions_management\Controller\AppliedCouponsController::build'
+    _title: 'Applied coupons'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+      _admin_route: TRUE
